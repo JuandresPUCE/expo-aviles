@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, Alert } from 'react-native';
+import Mail from '../my-app/Mail';
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -24,7 +25,8 @@ const LoginScreen = () => {
         secureTextEntry
       />
       <Button title="Iniciar sesión" onPress={onLogin} />
-      <Button title="Registrarse" onPress={() => { /* Aquí va la lógica de redirección al registro */ }} />
+      <Button title="Registrarse" onPress={() => navigation.navigate('Mail')} />
+      <Button title="¿Está registrado?" onPress={() => navigation.navigate('Mail')} />
       <Text>Versión de la aplicación: 1.0.0</Text>
     </View>
   );
