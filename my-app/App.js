@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar, StyleSheet } from 'react-native'; // Añade StyleSheet aquí
 import LoginScreen from '../my-app/LoginScreen';
 import Mail from '../my-app/Mail';
 
@@ -18,13 +18,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
